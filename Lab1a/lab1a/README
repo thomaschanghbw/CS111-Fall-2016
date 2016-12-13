@@ -1,0 +1,9 @@
+The files included are lab1a.c, Makefile, and this README.
+
+I used two threads in addition to the main program. One reads from the shell and writes it to stdout, as the spec requires. The other thread calls waitpid and stores the exit status of the shell into a global variable. My main program handles reading input from the terminal and sending it to the shell.
+
+I was unsure how to test that SIGINT is sent to the shell upon receiving ^C. I implemented this the same way as I did for ^D, which I was able to test, so I would assume this step works but I am still uncertain.
+
+SIGPIPE is received by attempting to write to the closed pipe, so the signal isn't received until an input is given from the terminal after the shell exits. I decided not to output the final write (the one that fails to be read from the exited shell) to the terminal. If the shell exits, the next input from the terminal will cause the process to exit.
+
+I was unsure whether this lab  would be programmatically tested or not, so for the exiting output of my program with --shell, I only print the exit code of the shell or the signal sent to the shell, without any other text accompanying it. 

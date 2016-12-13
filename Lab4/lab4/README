@@ -1,0 +1,19 @@
+Thomas Chang
+
+Both executables seem to work fine with no known bugs.
+
+----Part 1----
+Source file: lab4_1.c
+Log file: lab4_1_temperature.log
+
+----Part 2----
+Source file: lab4_2.c
+Log file: lab4_2_temperature.log
+
+The Makefile has a default and build option. Both will compile the c files. It
+also has a dist option for making the tarball.
+
+Both Part 1 and Part 2 have LCD support. I implemented the support by piecing
+together functions and data structures from various libraries. The executable still runs without the LCD display plugged in, but the output contains many error messages from the i2c library.
+
+For Part 2, I also output to stdout for debugging purposes. This output matches what is put into the log file.

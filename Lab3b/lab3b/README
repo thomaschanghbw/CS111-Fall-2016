@@ -1,0 +1,20 @@
+Thomas Chang
+
+
+I used c++ for this lab.
+
+Included files:
+	 lab3b.cpp
+	 Makefile
+	 README
+
+To compile the program, use either:
+   1. make
+   2. g++ -static-libstdc++ lab3b.cpp -o lab3b
+
+To run the program, use either:
+   1. make run
+   2. ./lab3b >> lab3_check.txt
+
+
+I only tested on the disk image provided. The output matches the sample output when sorted. To test Error Check #3, since the error does not occur in the sample, I manually edited numbers in the csv file in emacs. The directory.csv does not have any entries for inodes 1-10, but the inode.csv file does. I assumed that since the sample txt file does not raise an error here, that I should not include these ten reserved inodes in the error check. 

@@ -1,0 +1,14 @@
+Thomas Chang
+
+
+Executable compiles cleanly without errors. My c file is lab3a.c.
+
+I initially did sanity checks for the superblock and group descriptor, but did not implement sanity checks for the other parts of the project because my TA mentioned they were not in the sample solution and were not in the rubric.
+
+The resulting csv files all pass a diff test with the sample csv files.
+There are no known bugs with the executable, except that it does not do sanity checks for the last 4 parts.
+Currently, it is unknown whether the indirect pointers for the directory section work correctly, since following these pointers is not needed to produce the sample outputs. I believe that they work but this functionality has not been tested.
+
+I used structs from the ext2_fs.h header file, but did not use any macros or functions.
+
+For Part 6: Indirect block entry, I implemented double and triple indirect pointers, but received a single file that was not in the sample solution. I noticed that other people who implemented double and triple indirect pointers on Piazza also had an extra file as a result. I decided to remove the functionality of double and triple indirect pointers for the last section to adhere to the sample csv files.

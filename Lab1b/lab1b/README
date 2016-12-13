@@ -1,0 +1,6 @@
+Thomas Chang
+
+
+Neither executable has any known bugs. In server.c, I implemented a separate thread to wait and detect changes in the state of the shell. When a change is detected, meaning the shell exited, I close the read end of the pipe to the shell, and the write end of the pipe from the shell. To test that SIGPIPE works correctly, I removed the closing of the write end of the pipe, and attempted to pass input after using the exit command. To test that my read call returns 0 when the shell exits, I used the exit command to check that the process exits. The only case that I was unsure how to test was the case in which the client receives EOF.
+
+My implementation of the log option adds an entry into the log for every character sent and received. 
